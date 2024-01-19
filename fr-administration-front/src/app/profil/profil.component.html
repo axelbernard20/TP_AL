@@ -1,0 +1,14 @@
+<app-nav></app-nav>
+
+<div class="profile-container">
+  <h2>Profil de {{ user ? user.firstname + ' ' + user.lastname : 'Aucun utilisateur chargé.' }}</h2>
+
+  <ul>
+    <li>ID: {{ user ? user.id : 'N/A' }}</li>
+    <li>Prénom: {{ user ? user.firstname : 'N/A' }}</li>
+    <li>Nom: {{ user ? user.lastname : 'N/A' }}</li>
+    <li>Âge: {{ user ? user.age : 'N/A' }}</li>
+  </ul>
+
+  <button (click)="editProfile()">Éditer le profil</button>
+</div>

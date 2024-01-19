@@ -1,0 +1,13 @@
+<app-nav></app-nav>
+<div *ngIf="association">
+    <h2>{{ association.name }}</h2>
+    <!-- Afficher d'autres détails de l'association ici -->
+  
+    <h3>Membres</h3>
+    <ul>
+      <li *ngFor="let member of association.members">{{ member.name }}</li>
+    </ul>
+  
+    <!-- Afficher les minutes ou d'autres informations ici -->
+  </div>
+  

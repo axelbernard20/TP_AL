@@ -1,0 +1,12 @@
+<app-nav></app-nav>
+<div *ngIf="user">
+    <h2>{{ user.firstname }} {{ user.lastname }}</h2>
+    <h3>Age : {{ user.age }}</h3>
+    <h3>ID : {{ user.id }}</h3>
+  
+    <h3>Roles</h3>
+    <ul>
+      <li *ngFor="let role of user.roles">{{ role.name }}</li>
+    </ul>
+  </div>
+  

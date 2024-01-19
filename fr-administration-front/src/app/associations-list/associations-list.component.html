@@ -1,0 +1,30 @@
+<app-nav></app-nav>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!-- Colonne ID -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> ID </th>
+    <td mat-cell *matCellDef="let association"> {{association.id}} </td>
+  </ng-container>
+
+  <!-- Colonne Nom -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let association"> {{association.name}} </td>
+  </ng-container>
+
+  <!-- Colonne Membres -->
+  <ng-container matColumnDef="members">
+    <th mat-header-cell *matHeaderCellDef> Members </th>
+    <td mat-cell *matCellDef="let association"> {{association.members.length}} </td>
+  </ng-container>
+
+  <!-- Lignes du Tableau -->
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+</table>
+
+<div class="button-container">
+  <button (click)="redirectToCreation()">Ajouter une association</button>
+</div>
